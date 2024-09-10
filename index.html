@@ -3,23 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Shopping List Maker</title>
+    
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Shopping List Maker</h1>
-            <p>Please enter your items below:</p>
+            <h1>To Do List Maker</h1>
+            <hr class="divider">
+            <div class="form">
             <form>
-                <input type="text" placeholder="Apple" id="userInput" autocomplete="off">
-                <button type="button" id="btnSubmit">Add Item</button>
+                <input type="text" placeholder="Task to be done..." id="userInput" autocomplete="off" maxlength="15">
+                <button type="button" id="btnSubmit">Add</button>
+                <p id="error"></p>
             </form>
+         </div>
         </div>
         <div class="list">
-        
+        <h1><i class="fa-regular fa-pen-to-square"></i> Your tasks today</h1>
+        <p id="noneMsg">You have no tasks yet. :(</p>
+        <ul id="list"></ul>
         </div>
     </div>
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/44ad36a76d.js" crossorigin="anonymous"></script>
 </body>
 </html>
